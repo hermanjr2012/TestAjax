@@ -3,6 +3,7 @@ $('#posting').click(function(){
      .success(function(data) { 
                 var obj = eval('(' + data + ')');
                  alert(obj.message);
+                 alert(device.model);
              console.log(obj.cookie);
          })
      .fail(function (xhRequest, ErrorText, thrownError) { console.log(xhRequest.status + ', ' + ErrorText + ', ' + thrownError);});
@@ -58,3 +59,4 @@ function upload(file) {
   xhr.open('post', 'http://www.wiscribe.com/ajax/upload', true);
   xhr.send(form);
 }
+
